@@ -8,7 +8,6 @@ html {
 body {
   margin: 0;
   user-select: none;
-  position: relative;
 }
 .panels {
   min-height: 100vh;
@@ -17,11 +16,11 @@ body {
 }
 .panel {
   background: #000000;
-  box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.03);
+  box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
   color: white;
   text-align: center;
   align-items: center;
-  transition: filter 1s, font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+  transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
     flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
   font-size: 20px;
   background-size: cover;
@@ -31,7 +30,6 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
-  filter: blur(0.5px);
 }
 .panel1 {
   background-image: url(https://source.unsplash.com/1501x1501);
@@ -71,11 +69,11 @@ body {
 }
 .panel p {
   text-transform: uppercase;
-  font-family: "Occult Technique", cursive, "Gill Sans", "Gill Sans MT", Calibri,
-    "Trebuchet MS", sans-serif;
+  font-family: cursive, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
   font-size: 2em;
-  filter: blur(0.5px);
+  filter: blur(1px);
 }
 .panel p:nth-child(2) {
   font-size: 4em;
@@ -83,44 +81,4 @@ body {
 .panel:active {
   font-size: 40px;
   flex: 5;
-  filter: blur(0px);
-}
-.panels:active .panel:not(.panel:active) {
-  font-size: 10px;
-  filter: blur(1px);
-}
-.cursor {
-  pointer-events: none;
-  top: -1.5%;
-  right: 99.4%;
-}
-.c1 {
-  /* top: -1.5%;
-  right: 99.4%; */
-  width: 20px;
-  height: 20px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  position: fixed;
-}
-.c2 {
-  width: 7px;
-  /* top: -1.5%;
-  right: 99.4%; */
-  height: 7px;
-  border-radius: 50%;
-  transition: all 5s;
-  border: 2px solid #fff;
-  transform-origin: 20px 40px;
-  position: absolute;
-}
-.c3 {
-  /* top: -1.5%;
-  right: 99.4%; */
-  width: 2px;
-  height: 2px;
-  border-radius: 50%;
-  transition: all 4s;
-  border: 2px solid #fff;
-  position: absolute;
 }
