@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="http://fonts.cdnfonts.com/css/occult-technique"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>2D Quotes</title>
+  </head>
+  <body>
+    <div class="panels">
+      <div class="panel panel1">
+        <p>Live</p>
+        <p>Life</p>
+        <p>Beautifully</p>
+      </div>
+      <div class="panel panel2">
+        <p>All</p>
+        <p>Is</p>
+        <p>Well</p>
+      </div>
+      <div class="panel panel3">
+        <p>Learn</p>
+        <p>But</p>
+        <p>Apply</p>
+      </div>
+      <div class="panel panel4">
+        <p>Light</p>
+        <p>a</p>
+        <p>Candle</p>
+      </div>
+      <div class="panel panel5">
+        <p>The</p>
+        <p>Dream</p>
+        <p>Is Free</p>
+      </div>
+    </div>
+    <div class="cursor c1"></div>
+    <div class="cursor c3"></div>
+    <div class="cursor c2"></div>
+    <script>
+      document.querySelector("body").style.cursor = "none";
+      document.querySelector("body").append("");
+      const c1 = document.querySelector(".c1");
+      const c2 = document.querySelector(".c2");
+      const c3 = document.querySelector(".c3");
+      const movedCursor = (e) => {
+        const mouseY = e.clientY;
+        const mouseX = e.clientX;
+        c1.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+        c2.style.transform = c1.style.transform;
+
+        // c3.style.transition = `all ${Math.random() * 10}s`;
+      };
+      function updateSize() {
+        c3.style.width = `${Math.round(Math.random() * 80)}vmin`;
+        c3.style.height = c3.style.width;
+        c3.style.transform = `translate3d(${Math.round(
+          Math.random() * 40
+        )}vw, ${Math.round(Math.random() * 40)}vh,0)`;
+        c2.style.transition = `all ${Math.round(Math.random() * 50000)}ms`;
+      }
+      setInterval(updateSize, 10000);
+
+      window.addEventListener("mousemove", movedCursor);
+    </script>
+  </body>
+</html>
