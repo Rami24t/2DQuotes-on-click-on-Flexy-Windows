@@ -8,6 +8,7 @@ html {
 body {
   margin: 0;
   user-select: none;
+  font-family: "occult-technique";
 }
 .panels {
   min-height: 100vh;
