@@ -52,20 +52,13 @@
         const mouseY = e.clientY;
         const mouseX = e.clientX;
         c1.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
-        c2.style.transform = c1.style.transform;
-
-        // c3.style.transition = `all ${Math.random() * 10}s`;
-      };
-      function updateSize() {
-        c3.style.width = `${Math.round(Math.random() * 80)}vmin`;
-        c3.style.height = c3.style.width;
+        c2.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) rotate(360deg) `;
         c3.style.transform = `translate3d(${Math.round(
           Math.random() * 40
-        )}vw, ${Math.round(Math.random() * 40)}vh,0)`;
-        c2.style.transition = `all ${Math.round(Math.random() * 50000)}ms`;
-      }
-      setInterval(updateSize, 10000);
-
+        )}vw, ${Math.round(Math.random() * 40)}vh,0) rotate(360deg)`;
+      };
+      c2.style.transition = `all ${Math.round(Math.random() * 100000)}ms`;
+      c3.style.transition = `all ${Math.random() * 10}s`;
       window.addEventListener("mousemove", movedCursor);
     </script>
   </body>
